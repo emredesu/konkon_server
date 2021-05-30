@@ -16,3 +16,5 @@
 5- Log in using your MySQL credentials
 
 ##### Server is hosted on localhost with port 27015 by default. Edit `server_config.json` if you would like to change that or other variables such as the database port/address.
+
+##### Certificate files included are signed locally and included to be able to run the server out-of-the-box. They are obviously not secure to use.
