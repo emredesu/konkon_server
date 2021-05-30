@@ -1,5 +1,6 @@
 # konkon_server
 ### konkon_server is the server part of the chat application Konkon.
+[Client repository](https://github.com/emredesu/konkon_client)
 
 #### Usage
 1- Install requirements using `pip install -r requirements.txt`
