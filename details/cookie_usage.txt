@@ -1,0 +1,5 @@
+1- when the user successfully logs in, they're given a cookie, this cookie is generated with secrets.token_urlsafe(32)
+2- the server stores this cookie in a "valid cookies" list with the username this cookie is associated with
+3- the client stores this cookie and adds the cookie to their future communications
+4- on each request, the server checks if the user supplied a valid cookie alongside their message
+5- after the user is disconnected, the cookie associated with their username is deleted from server

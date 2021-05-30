@@ -1,0 +1,10 @@
+DATABASE konkon_messages
+	TABLE room_id_holder
+		ROW participant_a VARCHAR(32)
+		ROW participant_b VARCHAR(32)
+		room_id BIGINT UNSIGNED AUTO_INCREMENT
+	TABLE chatroom_{CHATROOM_ID}
+		ROW message_id BIGINT UNSIGNED AUTO_INCREMENT
+		ROW message_content VARCHAR(2000)
+		ROW sent_by VARCHAR(32)
+		ROW sent_at DATETIME

@@ -1,0 +1,7 @@
+DATABASE konkon_users
+	TABLE users
+		ROW VARCHAR(32) username;
+		ROW VARCHAR(128) password_hash;
+		ROW DATE created_at; // will be equal to NOW();
+		ROW JSON friends; // holds user's friends in an array in string format i.e. {"friends": []}
+		ROW JSON friend_requests; // holds user's friend requests in an array in string format i.e {"friend_requests": []}

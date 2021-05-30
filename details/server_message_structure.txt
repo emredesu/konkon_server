@@ -1,0 +1,144 @@
+	--- Unexpected error message ---
+{
+	"message-type": "unexpected-error"
+}
+
+--- Authentication failed message ---
+{
+	"message-type": "login-authentication",
+	"success": false,
+	"failure-reason": "why"
+}
+
+--- Authentication successful message ---
+{
+	"message-type": "login-authentication",
+	"success": true,
+	"friends": [],
+	"friend-requests": [],
+	"cookie": "cookie here"
+}
+	
+--- Registration successful message ---
+{
+	"message-type": "registration-confirmation",
+	"success": true
+}
+
+--- Registration failed message ---
+{
+	"message-type": "registration-confirmation",
+	"success": false,
+	"failure-reason": "what"
+}
+
+--- Sent friend request result: successful ---
+{
+	"message-type": "friend-request-result",
+	"success": true
+}
+
+--- Sent friend request result: failed ---
+{
+	"message-type": "friend-request-result",
+	"success": false,
+	"reason": "reason why the friend request failed"
+}
+
+--- Message sent from someone ---
+{
+	"message-type": "new-message",
+	"sent-by": "sender username",
+	"message-content": "message content",
+	"sent-at": "time since epoch"
+}
+
+--- Friendship request sent from someone ---
+{
+	"message-type": "new-friendship-request",
+	"sent-by": "sender username",
+	"sent-at": "time since epoch"
+}
+
+--- Friend request update for sender ---
+{
+	"message-type": "friend-request-update",
+	"request-recipient": "recipient username",
+	"is_accepted": bool
+}
+
+--- Friend deletion update: failed ---
+{
+	"message-type": "friend-deletion-update",
+	"deleted-user": "username",
+	"success": false,
+	"reason": "what"
+}
+
+--- Friend deletion update: successful ---
+{
+	"message-type": "friend-deletion-update",
+	"deleted-user": "username",
+	"success": true
+}
+
+--- Got deleted by a friend ---
+{
+	"message-type": "deleted-by-friend",
+	"deleted-by": "username"
+}
+
+--- Forced logout message ---
+{
+	"message-type": "forced-logout",
+	"reason": "what"
+}
+
+--- Message load request response: failed ---
+{
+	"message-type": "fetch-messages-request-response",
+	"success": false,
+	"user", "username",
+	"reason: "what"
+}
+
+--- Message load request response: successful --- 
+{
+	"message-type": "fetch-messages-request-response",
+	"success": true,
+	"user": "username",
+	"max_index": int,
+	"messages": [	
+			{
+				"index": int,
+				"sender": "username",
+				"sent-at": unix_timestamp,
+				"message-content": "hello world"
+			}
+		    ]
+}
+
+--- Example message JSON in successful message load request response ---
+{
+	"sent-at": unix timestamp,
+	"sent-by": "username",
+	"message-content": "blabla"
+}
+
+--- Dummy message to test if the socket is still connected ---
+{
+	"message-type": "dummy-message"
+}
+
+--- Online/offline check response for a single friend ---
+{
+	"message-type": "get-status-response",
+	"friend-username": "username",
+	"is_online": bool
+}
+
+--- Online/offline check response for all friends ---
+{
+	"message-type": "get-statuses-response",
+	"is_friend_online": {"friend1": True, "friend2": False}
+}
